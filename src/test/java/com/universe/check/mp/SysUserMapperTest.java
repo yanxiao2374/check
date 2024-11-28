@@ -6,7 +6,7 @@ import com.universe.check.model.SysUser ;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-
+import org.springframework.transaction.annotation.Transactional;
 
 
 @SpringBootTest
@@ -16,6 +16,7 @@ class SysUserMapperTest {
     private SysUserMapper sysUserMapper;
 
     @Test
+    @Transactional
     void testInsert() {
         SysUser sysUser = new SysUser();
         sysUser.setId(5L);
